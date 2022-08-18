@@ -1,0 +1,54 @@
+
+$light: #ffffff;
+$bg: rgb(244, 244, 255);
+
+$gray100: #e1e1e6;
+$gray300: #a8a8b3;
+$dark: rgb(29,29,29);
+
+$cyan-500: #61dafb;
+$yellow-500: #eba417;
+
+
+// spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+//border radius
+$borderRadius: 12px;
+
+//header height
+$headerHeight: 100px;
+
+@mixin breakpoint($point) {
+   @if $point == xl {
+        // 1120px
+        @media (min-width: 70em) {
+            @content;
+        }
+    } @else if $point == lg {
+        // 1024px
+        @media (min-width: 64em) {
+            @content;
+        }
+    } @else if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    } @else if $point == md-only {
+        // 767px
+        @media (max-width: 767px) {
+            @content;
+        }
+    } @else if $point == sm {
+        // 600px
+        @media (min-width: 37.5em) {
+            @content;
+        }
+    } @else if $point == sm-only {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+}
