@@ -2,14 +2,15 @@ import React, {useEffect, useState } from 'react';
 
 import { BiMenuAltRight} from 'react-icons/bi';
 import { AiOutlineClose } from "react-icons/ai";
+import { MdSearch } from 'react-icons/md';
 
 import styles from './styles.module.scss';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [size, setSize] = useState<any>({
-    width: 0,
-    height: 0,
+    width: null,
+    height: null,
   });
 
   useEffect(() => {
@@ -49,6 +50,11 @@ export function Header() {
             <li className={styles.list}><a href="" className={styles.link} onClick={menuToggleHandler}>Categorias</a></li>
             <li className={styles.list}><a href="" className={styles.link} onClick={menuToggleHandler}>Autor</a></li>
             <li className={styles.list}><a href="" className={styles.link} onClick={menuToggleHandler}>blog</a></li>
+            <li className={styles.list}>
+              <div className={styles.searchIcon}>
+                <MdSearch />
+              </div>
+            </li>
           </ul>
         </nav>
         <div className={styles.header__content__toggle}>
