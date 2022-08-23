@@ -1,0 +1,98 @@
+@import "../../styles/variables.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: $dark;
+  position: relative;
+
+}
+
+.footer {
+  padding: 5rem 0 2rem 0;
+  width: 1000px;
+  margin: 0 1.5rem;
+
+  &__newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+
+    &__headline {
+      color: $bg;
+      font-size: 1.1rem;
+      letter-spacing: $letterSpacing;
+      margin-bottom: 24px;
+    }
+    span {
+      color: $bg;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        width: 100%;
+      }
+
+      @include breakpoint(md) {
+        button {
+          width: auto;
+        }
+        flex-direction: row;
+      }
+
+      .input {
+        letter-spacing: $letterSpacing;
+        font-size: 1.1rem;
+        margin-bottom: $spacing-sm;
+        padding: $spacing-sm 24px;
+        border-radius: $borderRadius;
+
+        @include breakpoint(md) {
+          width: 300px;
+          margin-bottom: 0;
+          margin-right: $spacing-sm;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
+  &__content {
+    width: 100%;
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__col {
+    height: 100%;
+
+    &__healine {
+      color: $bg;
+      font-size: 1.6rem;
+      margin-bottom: 24px;
+      letter-spacing: $letterSpacing;
+    }
+  }
+  }
+
+}
