@@ -78,21 +78,79 @@
 
     @include breakpoint(sm) {
       grid-template-columns: repeat(2, 1fr);
-  }
-  @include breakpoint(md) {
-      grid-template-columns: repeat(4, 1fr);
-  }
+    }
+    @include breakpoint(md) {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-  &__col {
-    height: 100%;
+    &__col {
+      height: 100%;
 
-    &__healine {
-      color: $bg;
-      font-size: 1.6rem;
-      margin-bottom: 24px;
-      letter-spacing: $letterSpacing;
+      &__healine {
+        color: $bg;
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+        letter-spacing: $letterSpacing;
+      }
+
+      &__links {
+        li {
+          margin-bottom: $spacing-sm;
+          a {
+            letter-spacing: $letterSpacing;
+            width: 100%;
+            color: $bg;
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
+  &__base {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    color: $bg;
+    @include breakpoint(md) {
+      flex-direction: row;
+    }
+    a,
+    &__year,
+    ul {
+      &:not(:first-child) {
+        margin-bottom: $spacing-sm;
+        @include breakpoint(md) {
+          margin-bottom: 0;
+        }
+      }
+      @include breakpoint(md) {
+        flex: 1;
+      }
+    }
+    &__year {
+      display: flex;
+      justify-content: center;
+      letter-spacing: $letterSpacing;
+      font-size: 0.9rem;
+    }
+    &__socials {
+      display: flex;
+      justify-content: flex-end;
+      li {
+        &:not(:last-child) {
+          margin-right: 24px;
+          @include breakpoint(md) {
+            margin-right: $spacing-sm;
+          }
+        }
+        a {
+          font-size: 1.6rem;
+          color: $bg;
+          text-decoration: none;
+        }
+      }
+    }
   }
 
 }

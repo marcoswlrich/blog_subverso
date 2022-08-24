@@ -7,10 +7,6 @@ export default function Home() {
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       <title>Subverso</title>
     </Head>
-      <h1>
-      
-        Hello Word
-      </h1>
     </>
   )
 }
