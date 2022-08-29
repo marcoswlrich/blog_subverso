@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './styles.module.scss';
-import heroPic from '../../../public/images/hero.jpg'
+import heroPic from '../../../public/images/hero1.jpg'
 
 export function HeroSection() {
   return (
@@ -15,6 +15,7 @@ export function HeroSection() {
         <div className={styles.hero__right}>
           <Image className={styles.hero__right__image} src={heroPic} alt=""
         objectPosition="50% 30%"/>
+        
         </div>
       </div>
     </div>
