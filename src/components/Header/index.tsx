@@ -5,6 +5,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import { MdSearch } from 'react-icons/md';
 
 import styles from './styles.module.scss';
+import Image from 'next/image';
+import logo from '../../../public/images/logoI.png'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -39,6 +41,9 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__content}>
+        {/* <Image src={logo} width={30} height={30} 
+        priority
+        /> */}
          <h2 className={styles.header__content__logo}>Subverso</h2>
       
         <nav className={ `${styles.header__content__nav} ${

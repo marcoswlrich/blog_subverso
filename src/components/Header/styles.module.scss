@@ -3,6 +3,7 @@
 
 .header {
   background: $dark;
+  position: absolute;
   width: 100%;
   height: $headerHeight;
   padding: 0 1.5rem;
@@ -13,7 +14,7 @@
 
   &__content {
       overflow: hidden;
-      color: $light;
+      color: $bgtop;
       margin: 0 auto;
       max-width: 1920px;
       height: 100%;
@@ -26,9 +27,9 @@
       &__logo {
         font-family: "Abril Fatface";
         font-size: 2rem;
-        font-weight: bold;
-        font-style: italic;
-        color: $light;
+        font-weight:bold;
+        font-style:italic;
+        color: $bgtop;
       }
 
       &__nav {
