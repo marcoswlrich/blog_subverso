@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Monoton&family=Nova+Mono&family=Space+Mono:ital,wght@0,700;1,700&display=swap');
+
 @import "../../styles/variables.scss";
 
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
-  background: $dark;
+  background: $darkPurple;
   position: relative;
 
 }
@@ -80,27 +82,35 @@
       grid-template-columns: repeat(2, 1fr);
     }
     @include breakpoint(md) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     &__col {
       height: 100%;
 
-      &__healine {
+      &__headline {
         color: $bg;
-        font-size: 1.6rem;
-        margin-bottom: 24px;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: $spacing-md;
         letter-spacing: $letterSpacing;
       }
 
       &__links {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
         li {
+          list-style-type: none;
           margin-bottom: $spacing-sm;
           a {
             letter-spacing: $letterSpacing;
             width: 100%;
             color: $bg;
             text-decoration: none;
+            &:hover {
+              color: $primary;
+            }
           }
         }
       }
@@ -128,9 +138,16 @@
         flex: 1;
       }
     }
+    // &__logo {
+    //   font-family: "Abril Fatface";
+    //   font-size: 1.6rem;
+    //   font-weight: bold;
+    //   font-style: italic;
+    //   color: $light;
+    // }
     &__year {
-      display: flex;
-      justify-content: center;
+      display:flex;
+      justify-content:left;
       letter-spacing: $letterSpacing;
       font-size: 0.9rem;
     }
@@ -147,7 +164,7 @@
         }
         a {
           font-size: 1.6rem;
-          color: $primary;
+          color: $bg;
           text-decoration: none;
         }
        
